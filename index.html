@@ -2,70 +2,846 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Bablu 🌸</title>
+
+    <title>For Bablu ♡</title>
+
+
+    <!-- Fonts -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap"
         rel="stylesheet">
+
+
     <link rel="stylesheet" href="style.css">
+
 </head>
 
+
 <body>
-    <!-- Background Audio -->
-    <audio id="bg-music" src="asset/audio/piano.mp3" loop preload="auto"></audio>
 
-    <!-- Music Control Button -->
-    <button id="music-toggle" class="music-btn paused" title="Toggle Music" aria-label="Toggle Music">
-        <span class="music-icon">🎵</span>
-    </button>
 
-    <!-- Initial Loader Screen -->
-    <div id="loader">
-        <div class="sparkle"></div>
-        <h2 id="bablu">For Bablu</h2>
-        <p class="loading">A little surprise is finding you...</p>
-        <p class="tap-hint" id="tap-hint">tap anywhere to begin</p>
-    </div>
+    <!-- =====================================================
+     PASSWORD SCREEN
+===================================================== -->
 
-    <!-- Dynamic Falling Petals Layer -->
-    <div id="petals"></div>
+    <!-- =====================================================
+     PASSWORD SCREEN
+===================================================== -->
 
-    <!-- Decorative Corner Flowers -->
-    <img src="asset/images/flower.png" class="flower-decor top-left" alt="Decorative Flower">
-    <img src="asset/images/flower.png" class="flower-decor bottom-right" alt="Decorative Flower">
+    <section id="passwordScreen" class="password-screen">
 
-    <!-- Content Container -->
-    <div class="container">
-        <!-- Main Card -->
-        <div class="paper main-card">
-            <h1>A little surprise<br>is waiting for you.</h1>
-            <p>
-                Some things cannot fit<br>inside a box.
-                <br><br>
-                So...<br>
-                I hid them here instead.
-            </p>
-            <button id="begin">Begin ✨</button>
+        <!-- Decorative photos -->
+
+        <div class="password-photo password-photo-1">
+            <div class="photo-pin">📌</div>
+            <img src="asset/password1.jpg" alt="">
         </div>
 
-        <!-- Secret Surprise Reveal Card -->
-        <div class="paper surprise-card hidden">
-            <div class="flower-stamp">🌸</div>
-            <h1>Dear Bablu 💖</h1>
-            <p class="letter-text">
-                Every moment with you feels like a beautiful melody.<br><br>
-                May your day be filled with endless smiles, warmth, and all the love in the world.<br><br>
-                You mean the universe to me. Happy Birthday! 🌸✨
-            </p>
-            <button id="replay">Replay ✨</button>
+        <div class="password-photo password-photo-2">
+            <div class="photo-pin">📌</div>
+            <img src="asset/password2.jpg" alt="">
         </div>
-    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+        <div class="password-photo password-photo-3">
+            <div class="photo-pin">📌</div>
+            <img src="asset/password3.jpg" alt="">
+        </div>
+
+        <div class="password-photo password-photo-4">
+            <div class="photo-pin">📌</div>
+            <img src="asset/password4.jpg" alt="">
+        </div>
+
+
+        <!-- Main paper -->
+
+        <div class="password-paper">
+
+            <div class="paper-flower flower-one">
+                🌷
+            </div>
+
+            <div class="paper-flower flower-two">
+                🌸
+            </div>
+
+
+            <p class="small-note">
+                a little something for you...
+            </p>
+
+
+            <h1>
+                Before you enter...
+            </h1>
+
+
+            <p class="password-description">
+
+                There's a little birthday surprise
+                waiting for you inside.
+
+            </p>
+
+
+            <div class="lock-icon">
+                ♡
+            </div>
+
+
+            <p class="secret-hint">
+                you know the secret, don't you?
+            </p>
+
+
+            <input id="passwordInput" type="password" placeholder="enter the secret word..." autocomplete="off">
+
+
+            <button id="unlockButton">
+
+                Open my little surprise
+
+                <span>♡</span>
+
+            </button>
+
+
+            <p id="passwordError" class="password-error">
+                Hmm... that's not it ♡
+            </p>
+
+
+            <div class="password-doodle">
+                ─── ✦ ───
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+     WEBSITE
+===================================================== -->
+
+    <main id="mainWebsite" class="main-website hidden">
+
+
+        <!-- MUSIC -->
+
+        <button id="musicButton" class="music-button">
+
+            <span id="musicIcon">
+                ♫
+            </span>
+
+        </button>
+
+
+        <!-- =====================================================
+     SECTION 01 — HERO
+===================================================== -->
+
+        <section id="home" class="hero section-paper">
+
+
+            <!-- TOP STRING -->
+
+            <div class="photo-string top-string">
+
+                <div class="string"></div>
+
+
+                <div class="hanging-photo p1">
+                    <span>📌</span>
+                    <img src="asset/images/bablu1.jpg">
+                </div>
+
+
+                <div class="hanging-photo p2">
+                    <span>📌</span>
+                    <img src="asset/images/bablu2.jpg">
+                </div>
+
+
+                <div class="hanging-photo p3">
+                    <span>📌</span>
+                    <img src="asset/images/bablu3.jpg">
+                </div>
+
+
+                <div class="hanging-photo p4">
+                    <span>📌</span>
+                    <img src="asset/images/bablu4.jpg">
+                </div>
+
+
+                <div class="hanging-photo p5">
+                    <span>📌</span>
+                    <img src="asset/images/bablu5.jpg">
+                </div>
+
+
+                <div class="hanging-photo p6">
+                    <span>📌</span>
+                    <img src="asset/images/bablu6.jpg">
+                </div>
+
+            </div>
+
+
+
+            <!-- CENTER -->
+
+            <div class="hero-content">
+
+                <div class="flower-icon">
+                    🌷
+                </div>
+
+
+                <p class="eyebrow">
+                    today is your day
+                </p>
+
+
+                <h1>
+
+                    Happy Birthday
+
+                    <strong>
+                        Anuu
+                    </strong>
+
+                </h1>
+
+
+                <p class="hero-subtitle">
+                    ♡ have a great year anu ♡
+                </p>
+
+
+                <div class="doodle">
+                    ─── ✦ ───
+                </div>
+
+
+                <p class="hero-message">
+
+                    I hope you know just how
+                    special you are.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- BOTTOM STRING -->
+
+            <div class="photo-string bottom-string">
+
+                <div class="string"></div>
+
+
+                <div class="hanging-photo p7">
+                    <span>📌</span>
+                    <img src="asset/images/bablu7.jpg">
+                </div>
+
+
+                <div class="hanging-photo p8">
+                    <span>📌</span>
+                    <img src="asset/images/bablu8.jpg">
+                </div>
+
+
+                <div class="hanging-photo p9">
+                    <span>📌</span>
+                    <img src="asset/images/bablu9.jpg">
+                </div>
+
+
+                <div class="hanging-photo p10">
+                    <span>📌</span>
+                    <img src="asset/images/bablu10.jpg">
+                </div>
+
+
+                <div class="hanging-photo p11">
+                    <span>📌</span>
+                    <img src="asset/images/bablu11.jpg">
+                </div>
+
+
+                <div class="hanging-photo p12">
+                    <span>📌</span>
+                    <img src="asset/images/bablu12.jpg">
+                </div>
+
+            </div>
+
+
+            <div class="scroll-indicator">
+
+                <span>↓</span>
+
+                keep scrolling...
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+     SECTION 02 — HER SCRAPBOOK
+===================================================== -->
+
+        <section id="scrapbook" class="scrapbook section-paper">
+
+
+            <div class="section-heading">
+
+                <p>
+                    chapter one
+                </p>
+
+                <h2>
+                    The girl behind
+                    all these photos.
+                </h2>
+
+                <span>
+                    a tiny scrapbook dedicated to you ♡
+                </span>
+
+            </div>
+
+
+
+            <div class="scrapbook-wall">
+
+
+                <div class="scrap-photo photo-a">
+                    <img src="asset/images/bablu13.jpg">
+                    <p>sundarii ta ma ♡</p>
+                </div>
+
+
+                <div class="scrap-photo photo-b">
+                    <img src="asset/images/bablu14.jpg">
+                    <p>hasa to hee...</p>
+                </div>
+
+
+                <div class="scrap-photo photo-c">
+                    <img src="asset/images/bablu15.jpg">
+                    <p>kegs and barrels..</p>
+                </div>
+
+
+                <div class="scrap-photo photo-d">
+                    <img src="asset/images/bablu16.jpg">
+                    <p>hannn</p>
+                </div>
+
+
+                <div class="scrap-photo photo-e">
+                    <img src="asset/images/bablu17.jpg">
+                    <p>pagalaaaa</p>
+                </div>
+
+
+                <div class="scrap-note note-one">
+                    maal toki ta bee
+                </div>
+
+
+                <div class="scrap-note note-two">
+                    ♡
+                </div>
+
+
+                <div class="scrap-note note-three">
+                    budukk
+                </div>
+
+
+                <div class="scrap-flower">
+                    🌸
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+     SECTION 03 — THINGS I LIKE
+===================================================== -->
+
+        <section id="things" class="things-section">
+
+
+            <div class="section-heading light">
+
+                <p>
+                    chapter two
+                </p>
+
+                <h2>
+                    some thoughts for the bestest :*)
+                </h2>
+
+            </div>
+
+
+
+            <div class="things-container">
+
+
+                <!-- CARD 1 -->
+
+                <article class="thing-card">
+
+                    <div class="thing-number">
+                        01
+                    </div>
+
+                    <div class="thing-image">
+
+                        <img src="asset/images/bablu18.jpg">
+
+                    </div>
+
+                    <div class="thing-text">
+
+                        <h3>
+                            That smile.
+                        </h3>
+
+                        <p>
+
+                            You probably don't realise
+                            how easily this smile can
+                            make someone's day. obviously mu mo katha kahuchhi
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- CARD 2 -->
+
+                <article class="thing-card reverse">
+
+                    <div class="thing-number">
+                        02
+                    </div>
+
+                    <div class="thing-image">
+
+                        <img src="asset/images/bablu19.jpg">
+
+                    </div>
+
+                    <div class="thing-text">
+
+                        <h3>
+                            That pagala vibe.
+                        </h3>
+
+                        <p>
+
+                            Honestly, this sounds funny but this can make my day in a second of talking to you.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- CARD 3 -->
+
+                <article class="thing-card">
+
+                    <div class="thing-number">
+                        03
+                    </div>
+
+                    <div class="thing-image">
+
+                        <img src="asset/images/bablu20.jpg">
+
+                    </div>
+
+                    <div class="thing-text">
+
+                        <h3>
+                            Just... you.
+                        </h3>
+
+                        <p>
+
+                            you are Anu and thats enough...
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+     SECTION 04 — PHOTO FILM
+===================================================== -->
+
+        <section id="film" class="film-section">
+
+
+            <div class="film-title">
+
+                <p>
+                    chapter three
+                </p>
+
+                <h2>
+                    A little film
+                    of my favourite yous.
+                </h2>
+
+            </div>
+
+
+
+            <div class="film-window">
+
+                <div class="film-track">
+
+
+                    <div class="film-photo">
+                        <img src="asset/images/bablu1.jpg">
+                    </div>
+
+
+                    <div class="film-photo">
+                        <img src="asset/images/bablu4.jpg">
+                    </div>
+
+
+                    <div class="film-photo">
+                        <img src="asset/images/bablu7.jpg">
+                    </div>
+
+
+                    <div class="film-photo">
+                        <img src="asset/images/bablu10.jpg">
+                    </div>
+
+
+                    <div class="film-photo">
+                        <img src="asset/images/bablu13.jpg">
+                    </div>
+
+
+                    <div class="film-photo">
+                        <img src="asset/images/bablu16.jpg">
+                    </div>
+
+
+                    <div class="film-photo">
+                        <img src="asset/images/bablu18.jpg">
+                    </div>
+
+
+                    <!-- duplicate for continuous movement -->
+
+                    <div class="film-photo">
+                        <img src="asset/images/bablu1.jpg">
+                    </div>
+
+
+                    <div class="film-photo">
+                        <img src="asset/images/bablu4.jpg">
+                    </div>
+
+
+                    <div class="film-photo">
+                        <img src="asset/images/bablu7.jpg">
+                    </div>
+
+
+                    <div class="film-photo">
+                        <img src="asset/images/bablu10.jpg">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <p class="film-caption">
+                hope you like all the photos selected by me :)
+            </p>
+
+        </section>
+
+
+
+
+
+        <!-- =====================================================
+     SECTION 06 — LETTER
+===================================================== -->
+
+        <section id="letter" class="letter-section">
+
+
+            <div class="letter-wrapper">
+
+
+                <div class="letter-paper">
+
+
+                    <div class="letter-flower">
+                        🌷
+                    </div>
+
+
+                    <p class="letter-small">
+                        a letter for you
+                    </p>
+
+
+                    <h2>
+                        Dear Anu,
+                    </h2>
+
+
+                    <div class="letter-content">
+
+                        <p>
+
+                            First of all, I just want to wish you
+                            a very, very happy birthday.
+
+                        </p>
+
+
+                        <p>
+
+                            I genuinely hope you get everything
+                            you want in life and everything you
+                            dream of doing.
+
+                        </p>
+
+
+                        <p>
+
+                            I hope life's path is kind to you.
+                            I hope you don't have to face
+                            unnecessary stones along the way.
+
+                        </p>
+
+
+                        <p>
+
+                            And whenever things do get difficult,
+                            I hope you remember how strong
+                            you actually are.
+
+                        </p>
+
+
+                        <p>
+
+                            I'm genuinely grateful that somehow
+                            our paths crossed and that I get to
+                            have you in my life.
+
+                        </p>
+
+
+                        <p>
+
+                            mu achhi eithi sabubele ta katha suniba pai and you know that..ta saha hasa khusi thu
+                            arambha kari mana dukh ja sabu share karichhi au karuthhibi bi..
+
+                        </p>
+
+
+                        <p>
+
+                            auu hann jebe bi overthink haba gote ring dura re achhi na amlan ta taku call karidabu.. ta
+                            katha sunibaku sabubele ready se hela..
+
+                        </p>
+
+
+                        <p>
+
+                            auu jaha kahibara achhi call re kahibi hela..
+
+                        </p>
+
+
+                        <p>
+
+                            So today isn't just about wishing
+                            you a happy birthday.
+
+                        </p>
+
+
+                        <p>
+
+                            It's also about reminding you that
+                            you are genuinely special.
+
+                        </p>
+
+
+                        <p class="letter-ending">
+
+                            Happy Birthday, Babulu.
+
+                            <br>
+
+                            ♡
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="letter-signature">
+
+                        — from amlan:)
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+     SECTION 07 — FINAL SURPRISE
+===================================================== -->
+
+        <section id="final" class="final-section">
+
+
+            <div class="final-content">
+
+
+                <p class="final-small">
+                    one last thing, ...
+                </p>
+
+
+                <div class="final-heart">
+                    ♡
+                </div>
+
+
+                <h2>
+
+                    I hope this year
+                    is beautiful.
+
+                </h2>
+
+
+                <p>
+
+                    I hope you laugh a little more.
+                    <br>
+
+                    Dream a little bigger.
+                    <br>
+
+                    And find countless reasons
+                    to smile.
+
+                </p>
+
+
+                <div class="final-line">
+                    ───────── ✦ ─────────
+                </div>
+
+
+                <h1>
+                    Happy Birthday
+                    <span>Babulu ♡</span>
+                </h1>
+
+
+                <div class="final-photo">
+
+                    <img src="asset/hn.jpg" alt="A special memory">
+
+                </div>
+
+
+                <p class="final-footer">
+
+                    REALYY GREATFULL TO HAVE YOU ❤️
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+     AUDIO
+===================================================== -->
+
+    <audio id="birthdayMusic" loop>
+
+        <source src="asset/audio/bday.mp3" type="audio/mpeg">
+
+    </audio>
+
+
+
     <script src="script.js"></script>
+
 </body>
 
 </html>
