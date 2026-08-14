@@ -14,7 +14,7 @@
 
 */
 
-const SECRET_PASSWORD = "bablu";
+const SECRET_PASSWORD = "bablu@123";
 
 
 const passwordScreen =
